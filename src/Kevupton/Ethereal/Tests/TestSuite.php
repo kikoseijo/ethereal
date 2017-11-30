@@ -1,5 +1,12 @@
-<?php namespace Kevupton\Ethereal\Tests;
+<?php
 
+namespace Kevupton\Ethereal\Tests;
+
+/**
+ * @deprecated
+ * Class TestSuite
+ * @package Kevupton\Ethereal\Tests
+ */
 abstract class TestSuite {
 
     /**
