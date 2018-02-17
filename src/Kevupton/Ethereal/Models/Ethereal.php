@@ -1,9 +1,11 @@
 <?php namespace Kevupton\Ethereal\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Kevupton\Ethereal\Interfaces\RelationshipConstants;
 use Kevupton\Ethereal\Traits\HasAutoHydration;
 use Kevupton\Ethereal\Traits\HasDynamicRelationships;
 use Kevupton\Ethereal\Traits\HasEventListeners;
+use Kevupton\Ethereal\Traits\HasMemory;
 use Kevupton\Ethereal\Traits\HasSingletonMethods;
 use Kevupton\Ethereal\Traits\HasTableColumns;
 use Kevupton\Ethereal\Traits\HasValidation;
@@ -15,7 +17,8 @@ class Ethereal extends Model implements RelationshipConstants
         HasValidation,
         HasDynamicRelationships,
         HasTableColumns,
-        HasAutoHydration
+        HasAutoHydration,
+        HasMemory
     {
         HasEventListeners::boot insteadof HasValidation;
         HasEventListeners::getEventNameFromMethod insteadof HasValidation;
